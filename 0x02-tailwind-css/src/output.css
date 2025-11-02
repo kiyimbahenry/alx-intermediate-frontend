@@ -1,4 +1,4 @@
-/* Basic CSS Grid Layout with Tailwind-like utilities */
+/* Complete Tailwind CSS utilities for all projects */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -10,7 +10,7 @@ body {
   line-height: 1.5;
 }
 
-/* Padding */
+/* ===== PADDING UTILITIES ===== */
 .p-2 {
   padding: 0.5rem;
 }
@@ -19,7 +19,17 @@ body {
   padding: 1rem;
 }
 
-/* Grid */
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* ===== MARGIN UTILITIES ===== */
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+/* ===== GRID UTILITIES ===== */
 .grid {
   display: grid;
 }
@@ -40,9 +50,27 @@ body {
   gap: 1rem;
 }
 
-/* Blue Background Colors */
+/* ===== FLEXBOX UTILITIES ===== */
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.space-x-5 > * + * {
+  margin-left: 1.25rem;
+}
+
+/* ===== BACKGROUND COLORS ===== */
+/* Blue Colors */
 .bg-blue-200 {
   background-color: #bfdbfe;
+}
+
+.bg-blue-300 {
+  background-color: #93c5fd;
 }
 
 .bg-blue-400 {
@@ -53,7 +81,7 @@ body {
   background-color: #3b82f6;
 }
 
-/* Red Background Colors */
+/* Red Colors */
 .bg-red-200 {
   background-color: #fecaca;
 }
@@ -66,16 +94,53 @@ body {
   background-color: #ef4444;
 }
 
-/* Green Background Colors */
+/* Green Colors */
 .bg-green-200 {
   background-color: #bbf7d0;
 }
 
-/* Yellow Background Colors */
+/* Yellow Colors */
 .bg-yellow-200 {
   background-color: #fef08a;
 }
 
+/* Gray Colors */
+.bg-gray-300 {
+  background-color: #d1d5db;
+}
+
+.bg-gray-500 {
+  background-color: #6b7280;
+}
+
+/* ===== TEXT UTILITIES ===== */
+.text-white {
+  color: white;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+/* ===== HOVER STATES ===== */
+.hover\:bg-gray-500:hover {
+  background-color: #6b7280;
+}
+
+/* ===== BORDER RADIUS ===== */
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+/* ===== LAYOUT COMPONENTS ===== */
 /* Header Styles */
 header {
   background-color: #f8fafc;
@@ -91,7 +156,7 @@ h1 {
   color: #1e293b;
 }
 
-/* Column Styles */
+/* Column/Div Styles */
 div {
   text-align: center;
   border-radius: 0.5rem;
@@ -108,17 +173,36 @@ div {
   min-height: 60px;
 }
 
-/* Responsive Design */
+/* Link Styles */
+a {
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
+  /* Grid responsive */
   main {
     grid-template-columns: 1fr !important;
   }
   
+  /* Header responsive */
   header {
     padding: 1.5rem;
   }
   
   h1 {
     font-size: 1.5rem;
+  }
+  
+  /* Navigation responsive - This is also in HTML but included here for completeness */
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .space-x-5 > * + * {
+    margin-left: 0;
+    margin-top: 0.5rem;
   }
 }
