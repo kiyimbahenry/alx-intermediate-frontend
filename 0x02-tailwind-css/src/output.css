@@ -10,35 +10,70 @@ body {
   line-height: 1.5;
 }
 
+/* Padding */
+.p-2 {
+  padding: 0.5rem;
+}
+
+.p-4 {
+  padding: 1rem;
+}
+
 /* Grid */
 .grid {
   display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
 
-/* Background Colors */
+/* Blue Background Colors */
 .bg-blue-200 {
   background-color: #bfdbfe;
-}
-
-.bg-blue-300 {
-  background-color: #93c5fd;
 }
 
 .bg-blue-400 {
   background-color: #60a5fa;
 }
 
-/* Padding */
-.p-4 {
-  padding: 1rem;
+.bg-blue-500 {
+  background-color: #3b82f6;
+}
+
+/* Red Background Colors */
+.bg-red-200 {
+  background-color: #fecaca;
+}
+
+.bg-red-400 {
+  background-color: #f87171;
+}
+
+.bg-red-500 {
+  background-color: #ef4444;
+}
+
+/* Green Background Colors */
+.bg-green-200 {
+  background-color: #bbf7d0;
+}
+
+/* Yellow Background Colors */
+.bg-yellow-200 {
+  background-color: #fef08a;
 }
 
 /* Header Styles */
@@ -62,10 +97,15 @@ div {
   border-radius: 0.5rem;
   font-weight: 500;
   color: #1e293b;
-  min-height: 100px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Nested grid items - smaller min-height */
+.grid > div > div {
+  min-height: 60px;
 }
 
 /* Responsive Design */
