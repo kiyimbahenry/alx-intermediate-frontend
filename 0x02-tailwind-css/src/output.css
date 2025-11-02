@@ -1,0 +1,84 @@
+/* Basic CSS Grid Layout with Tailwind-like utilities */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* Background Colors */
+.bg-blue-200 {
+  background-color: #bfdbfe;
+}
+
+.bg-blue-300 {
+  background-color: #93c5fd;
+}
+
+.bg-blue-400 {
+  background-color: #60a5fa;
+}
+
+/* Padding */
+.p-4 {
+  padding: 1rem;
+}
+
+/* Header Styles */
+header {
+  background-color: #f8fafc;
+  padding: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+h1 {
+  font-size: 1.875rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* Column Styles */
+div {
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: #1e293b;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr !important;
+  }
+  
+  header {
+    padding: 1.5rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+}
