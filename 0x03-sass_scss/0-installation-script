@@ -1,0 +1,11 @@
+## Installation of SASS
+1. Installed Node.js from its official website
+   - that is the https://nodejs.org/
+   - choose the LTS version
+   - run the installer and followed the setup wizard
+2. verified the Node.js installation 
+   - npm --version
+3. installed SASS globally using npm
+   - npm install -g sass
+4. verified SASS installation
+  - sass --version
